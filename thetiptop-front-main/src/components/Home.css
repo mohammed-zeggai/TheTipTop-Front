@@ -1,0 +1,58 @@
+.home {
+  background-color: var(--overlay);
+  color: #fff;
+  /* height: auto;
+  width: 100%;
+  position: relative;*/
+  text-align: center;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.home:before {
+  content: "";
+  background: url("./images/cup-tea2.jpg") no-repeat center center/cover;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.home .content {
+  /* height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1000px;
+  margin: auto;
+  padding: 1rem;
+  margin-bottom: 5rem; */
+
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem;
+  text-align: center;
+  /* margin-bottom: 5rem; */
+}
+
+.home .button {
+  margin: 1rem 0;
+  width: 200px;
+  padding: 17px 28px;
+  font-size: 1.2rem;
+}
+
+.about .button {
+  margin: 1rem 0;
+  width: 200px;
+  padding: 17px 28px;
+  font-size: 1.2rem;
+}

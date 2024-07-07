@@ -1,0 +1,135 @@
+.header {
+  position: fixed;
+  height: var(--nav-bar-height);
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transition: 0.3s ease-in;
+  overflow: hidden;
+  background-color: #0F2223;
+}
+
+.header .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: var(--rendering-width);
+  margin: auto;
+  margin-bottom: 5rem;
+  height: 100%;
+  padding: 1rem;
+}
+
+.header .nav-menu a {
+  color: #ffffff;
+}
+
+.header .navbar img {
+  width: 210px;
+  height: auto;
+}
+
+.header .nav-menu {
+  display: flex;
+}
+
+.header .nav-item {
+  padding: 1rem;
+  font-weight: 500;
+  align-self: baseline;
+}
+
+.header .nav-item a {
+  position: relative;
+  cursor: pointer;
+  top: 0;
+  transition: top ease 0.5s;
+}
+
+.header .nav-item a:hover {
+  padding-bottom: 12px;
+  border-bottom: 3px solid var(--primary-color);
+  top: -5px;
+}
+
+.hamburger {
+  display: none;
+}
+
+.header .login,
+.header .logout {
+  position: relative;
+  width: 140px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 1px solid;
+}
+
+.header .logout {
+  background-color: rgb(252, 57, 57);
+  border-color: rgb(252, 57, 57);
+}
+.logout:hover {
+  background-color: rgb(252, 57, 57, 0.9);
+}
+
+.header .login {
+  background-color: rgb(12, 142, 12);
+  border-color: rgb(12, 142, 12);
+}
+
+.login:hover {
+  background-color: rgb(12, 142, 12, 0.9);
+}
+
+@media screen and (max-width: 980px) {
+  .header {
+    max-width: 100%;
+    background-color: #0e2526e6;
+  }
+
+  .header .navbar {
+    max-width: 100%;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-menu {
+    position: fixed;
+    right: -100%;
+    top: var(--nav-bar-height);
+    flex-direction: column;
+    background-color: #0e2526e6;
+    width: 100%;
+    height: 90vh;
+    z-index: 999;
+    text-align: center;
+    transition: 0.3s;
+  }
+
+  .nav-menu.active {
+    right: 0;
+  }
+
+  .header .nav-item {
+    margin: 1.5rem 0;
+    align-self: center;
+  }
+
+  .header .nav-item a:hover {
+    top: 0;
+  }
+
+  .header .navbar img {
+      width: 190px;
+      height: auto;
+  }
+}

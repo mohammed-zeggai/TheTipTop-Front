@@ -1,0 +1,96 @@
+:root {
+  --primary-color: #5bb462;
+  --primary-dark: #4f9c55;
+  --secondary-color: #ffea00;
+  --secondary-dark: #e3d002;
+  --overlay: rgba(0, 0, 0, 0.7);
+  --nav-bar-height: 78px;
+  --rendering-width: 1450px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow-x: clip;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1.2rem;
+  line-height: 1.2;
+  
+
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+      monospace;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+h5 {
+  color: #fff;
+  padding-top: 0.5rem;
+  margin-bottom: 2rem;
+  margin-left: 4rem;
+}
+
+.button {
+  padding: 17px 28px;
+  font-size: 1.2rem;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: var(--primary-dark);
+  border: 1px solid var(--primary-dark);
+}
+
+.line {
+  display: block;
+  width: 40px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: var(--primary-color);
+}
+
+.main {
+  background-color: var(--overlay);
+  color: rgb(0, 0, 0);
+  min-height: calc(100vh - 8rem);
+  height: fit-content;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  padding-top: var(--nav-bar-height);
+  display: block;
+}
+
+.main:before {
+  content: "";
+  background: url("./components/images/cup-tea2.jpg") no-repeat center center/cover fixed;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
